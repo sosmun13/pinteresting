@@ -1,8 +1,13 @@
 <div class="jumbotron center">
 	<h1>Welcome to Voss Property Management!</h1>
+		<% if user_signed_in? %> 
+		Welcome to the members area.
+		<% else %>
 	<p>
-		<%= link_to "Log in", "#", class: "btn btn-default btn-long" %>
-		<%= link_to "Sign Up", "#", class: "btn btn-primary btn-long" %>
+		<%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-long" %>
+		<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-long" %>
 	</p>
+		<% end %>
+
 </div>
 
